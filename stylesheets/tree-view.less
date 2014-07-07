@@ -1,0 +1,43 @@
+@import "ui-variables";
+
+.tree-view {
+  font-size: @font-size;
+  background-color: lighten(@app-background-color, 1%);
+}
+
+.workspace { // specificity
+  .tree-view {
+    padding: 0;
+    box-sizing: border-box;
+
+    // Special styling for the project directory
+    & > .directory > .header {
+      padding-left: 5px;
+      height: 33px;
+      line-height: 32px;
+      background: @tool-panel-background-color;
+      span {
+        color: @text-color-highlight;
+      }
+    }
+
+    .entry.list-item, .header.list-item {
+      &:hover {
+        color: @text-color-highlight;
+      }
+    }
+  }
+}
+
+.focusable-panel {
+  opacity: 1;
+
+  &:focus {
+    .selected > .name,
+    .selected > .name:before,
+    .selected > .list-item > .name,
+    .selected > .list-item > .name:before {
+      color: #fff !important;
+    }
+  }
+}

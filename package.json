@@ -1,0 +1,25 @@
+{
+  "name": "quantum",
+  "theme": "ui",
+  "version": "0.2.0",
+  "description": "A flat theme for Atom based around base16 Tomorrow.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mbullington/quantum-ui"
+  },
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/mbullington/quantum-ui/issues"
+  },
+  "homepage": "https://github.com/mbullington/quantum-ui",
+  "_id": "quantum-ui@0.2.0",
+  "dist": {
+    "shasum": "c90038fcfbfd3753dab0bf6e146dab11193fe9a8"
+  },
+  "_resolved": "/var/folders/9x/51q49zyj723g6_tvnf_wdp280000gn/T/d-114411-1987-z3volz/package.tgz",
+  "_from": "/var/folders/9x/51q49zyj723g6_tvnf_wdp280000gn/T/d-114411-1987-z3volz/package.tgz"
+}
