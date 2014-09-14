@@ -2,6 +2,40 @@
 @import "ui-mixins";
 @import "octicon-mixins";
 
+.list-tree.has-collapsable-children .list-nested-item > .list-item:before {
+  content: "" !important;
+  width: 5px !important;
+}
+
+.list-tree.has-collapsable-children li.list-item {
+  margin-left: 10px !important;
+}
+
+.list-tree.has-collapsable-children .list-nested-item {
+  & > .list-item:after {
+    font-family: 'Octicons Regular';
+    font-weight: normal;
+    font-style: normal;
+    display: inline-block;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+    font-size: 12px;
+    width: 12px;
+    height: 12px;
+    padding-left: 8px;
+    content: "";
+  }
+
+  & > .list-item:hover:after {
+    content: "\f0a3";
+  }
+
+  &.collapsed > .list-item:hover:after {
+    content: "\f078";
+  }
+}
+
 .list-group, .list-tree {
   li:not(.list-nested-item),
   li.list-nested-item > .list-item {

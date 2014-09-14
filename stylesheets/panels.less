@@ -16,20 +16,28 @@
   background-color: @tool-panel-background-color;
 
   .btn {
-    border: 1px solid rgba(255,255,255,0.1) !important;
+    border: 0 !important;
+    background: rgba(0, 0, 0, 0.1);
     transition: none;
-    &.selected, &:active {
+
+    &:hover,
+    &.selected,
+    &:active {
       background: @background-color-selected;
     }
+
     &:hover {
       color: @text-color-highlight;
-      border: 1px solid rgba(255,255,255,0.2) !important;
     }
   }
 
   .editor.mini {
     background: rgba(0,0,0,0.1);
     height: 27px;
+
+    &.is-focused .placeholder-text {
+        color: @text-color;
+    }
   }
 }
 
@@ -47,8 +55,6 @@
 .panel-heading {
   .text(normal);
 
-  background-color: transparent;
-
   .btn {
     padding-left: 8px;
     padding-right: 8px;
@@ -59,4 +65,6 @@
     @text: lighten(@text-color, 10%);
     .btn-background(@bg, @hover, @selected, @text);
   }
+
+  background-color: transparent;
 }

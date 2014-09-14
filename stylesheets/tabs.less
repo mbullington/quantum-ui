@@ -23,9 +23,14 @@
     transition: color .1s ease-in;
     border-top: 1px solid transparent;
 
+    &:not(:last-child) {
+      border-right: 1px solid darken(@tool-panel-background-color, 2%);
+    }
+  
+
     .title {
       position: relative;
-      top: 1px;
+      top: 0px;
     }
 
     .close-icon {
@@ -44,7 +49,7 @@
       width: @modified-icon-width;
       height: @modified-icon-width;
       border-width: 2px;
-      border-color: rgb(149, 151, 149);
+      border-color: #5c98cd;
     }
 
     &:first-child {

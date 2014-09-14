@@ -7,3 +7,26 @@
 .workspace {
   background-color: @app-background-color;
 }
+
+.scrollbars-visible-always {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track,
+  ::-webkit-scrollbar-corner {
+    background: @scrollbar-background-color;
+		box-shadow: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: @scrollbar-color;
+    border-radius: 5px;
+    box-shadow: none;
+
+		&:hover {
+			background: @scrollbar-color;
+		}
+  }
+}
