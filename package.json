@@ -1,7 +1,7 @@
 {
   "name": "quantum-ui",
   "theme": "ui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Quantum is a simple, flat theme for Atom based around the Tomorrow color scheme.",
   "license": "MIT",
   "repository": {
