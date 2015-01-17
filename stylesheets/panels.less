@@ -9,10 +9,10 @@
 }
 
 
-.tool-panel {
+.atom-panel {
   .text(normal);
   position: relative;
-
+  
   background-color: @tool-panel-background-color;
 
   .btn {
@@ -31,12 +31,12 @@
     }
   }
 
-  .editor.mini {
+  .atom-text-editor[mini] {
     background: rgba(0,0,0,0.1);
     height: 27px;
 
     &.is-focused .placeholder-text {
-        color: @text-color;
+      color: @text-color;
     }
   }
 }
@@ -47,7 +47,7 @@
 }
 
 .is-blurred {
-  .tool-panel,
+  .atom-panel,
   .inset-panel {
   }
 }
