@@ -1,7 +1,7 @@
 @import "ui-variables";
 @import "ui-mixins";
 
-.atom-text-editor[mini] {
+atom-text-editor[mini] {
   color: @text-color-highlight;
   background-color: @input-background-color;
   border-radius: @component-border-radius;
@@ -15,7 +15,7 @@
   .selection .region { background-color: lighten(@input-background-color, 10%); }
 }
 
-.atom-text-editor::shadow {
+atom-text-editor::shadow {
   .scroll-view {
     padding-left: 0px;
   }
@@ -25,26 +25,26 @@
   }
 }
 
-.atom-text-editor::shadow .gutter {
+atom-text-editor::shadow .gutter {
   border-right: 0;
 }
 
-.atom-text-editor[mini].is-focused {
+atom-text-editor[mini].is-focused {
   .selection .region { background-color: lighten(@app-background-color, 5%); }
   transition: background-color 0.1s
 }
 
-.atom-text-editor::shadow .selection .region {
+atom-text-editor::shadow .selection .region {
   background-color: @background-color-selected;
 }
 
 
-.atom-text-editor::shadow .highlighted.selection .region {
+atom-text-editor::shadow .highlighted.selection .region {
   -webkit-animation-name: highlight;
   -webkit-animation-duration: 1s;
   -webkit-animation-iteration-count: 1;
 }
 
-.atom-text-editor::shadow .gutter.drop-shadow {
+atom-text-editor::shadow .gutter.drop-shadow {
   box-shadow: 5px 0 10px rgba(0,0,0,0.1);
 }
