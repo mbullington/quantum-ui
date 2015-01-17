@@ -1,4 +1,5 @@
 @import "ui-variables";
+@import "syntax-variables";
 
 @modified-icon-width: 8px;
 @tab-top-padding: 0px;
@@ -26,7 +27,7 @@
     &:not(:last-child) {
       border-right: 1px solid darken(@tool-panel-background-color, 2%);
     }
-  
+
 
     .title {
       position: relative;
@@ -66,7 +67,7 @@
   .tab.active {
     z-index: 10;
     line-height: @tab-height - 5px;
-    color: @text-color-highlight;
+    color: @syntax-text-color;
 
     .close-icon {
       line-height: @tab-height -5px;
@@ -74,13 +75,13 @@
     }
 
     &, &:before {
-      background-color: @tab-background-color-active;
+      background-color: @syntax-background-color;
       height: @tab-height;
     }
   }
 
   .tab:hover {
-    color: @text-color-highlight;
+    color: @syntax-text-color;
   }
 
   .tab.active:hover .close-icon {
