@@ -2,7 +2,6 @@
 @import "syntax-variables";
 
 @modified-icon-width: 8px;
-@tab-top-padding: 0px;
 @tab-bottom-border-height: 8px;
 
 .tab-bar {
@@ -18,16 +17,14 @@
   }
 
   .tab {
+    margin-top: @tab-top-padding;
     height: @tab-height;
     line-height: @tab-height - 5px;
     color: @text-color;
     transition: color .1s ease-in;
     border-top: 1px solid transparent;
-
-    &:not(:last-child) {
-      border-right: 1px solid darken(@tool-panel-background-color, 2%);
-    }
-
+    border-top-left-radius: 1px;
+    border-top-right-radius: 1px;
 
     .title {
       position: relative;
@@ -50,7 +47,7 @@
       width: @modified-icon-width;
       height: @modified-icon-width;
       border-width: 2px;
-      border-color: #5c98cd;
+      border-color: #ced2d4;
     }
 
     &:first-child {
@@ -67,24 +64,33 @@
   .tab.active {
     z-index: 10;
     line-height: @tab-height - 5px;
-    color: @syntax-text-color;
+    color: @text-color-highlight;
+
+    &[title] {
+      color: @syntax-text-color;
+    }
 
     .close-icon {
       line-height: @tab-height -5px;
       display: block;
     }
 
+    &[title].modified:not(:hover) .close-icon {
+      border-color: @syntax-text-color;
+    }
+
     &, &:before {
       background-color: @syntax-background-color;
       height: @tab-height;
     }
+
+    &:not([title]),
+    &:not([title]):before {
+      background-color: @tab-background-color-active;
+    }
   }
 
-  .tab:hover {
-    color: @syntax-text-color;
-  }
-
-  .tab.active:hover .close-icon {
+  .tab:not(.active):hover {
     color: @text-color-highlight;
   }
 

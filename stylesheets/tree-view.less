@@ -13,8 +13,8 @@ atom-workspace { // specificity
     // Special styling for the project directory
     & > .directory > .header {
       padding-left: 5px;
-      height: 33px;
-      line-height: 32px;
+      height: @tab-height + @tab-top-padding;
+      line-height: @tab-height + @tab-top-padding - 1;
       background: @tool-panel-background-color;
       span {
         color: @text-color-highlight;
