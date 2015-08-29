@@ -21,10 +21,12 @@
     height: @tab-height;
     line-height: @tab-height - 5px;
     color: @text-color;
-    transition: color .1s ease-in;
+    transition: color .1s ease-in, border-bottom-color 200ms ease-in-out;
     border-top: 1px solid transparent;
-    border-top-left-radius: 1px;
-    border-top-right-radius: 1px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-bottom: 0;
+    border-bottom-color: fade(lighten(@background-color-info, 20%), 90%);
 
     .title {
       position: relative;
@@ -32,8 +34,12 @@
     }
 
     .close-icon {
-      display: none;
+      display: block;
+      opacity: 0;
       right: 8px;
+      transform: translate(0,1px) scale(0.8);
+      transform-origin: 50% 50%;
+      transition: transform 200ms ease, opacity 200ms ease;
 
       &:hover {
         color: @text-color-error !important;
@@ -56,7 +62,8 @@
 
     &:hover {
       .close-icon {
-        display: block;
+        opacity: 1;
+        transform: translate(0,0) scale(1);
       }
     }
   }
@@ -66,13 +73,16 @@
     line-height: @tab-height - 5px;
     color: @text-color-highlight;
 
+    border-bottom: 2px solid fade(@background-color-info, 70%);
+
     &[title] {
       color: @syntax-text-color;
     }
 
     .close-icon {
       line-height: @tab-height -5px;
-      display: block;
+      opacity: 1;
+      transform: translate(0,0) scale(1);
     }
 
     &[title].modified:not(:hover) .close-icon {
@@ -80,13 +90,15 @@
     }
 
     &, &:before {
-      background-color: @syntax-background-color;
+      background-color: @input-background-color;
       height: @tab-height;
     }
 
+    border-top-color: lighten(@app-background-color, 7%);
+
     &:not([title]),
     &:not([title]):before {
-      background-color: @tab-background-color-active;
+      background-color: @input-background-color;
     }
   }
 

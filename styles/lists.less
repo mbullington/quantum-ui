@@ -23,16 +23,19 @@
     font-size: 12px;
     width: 12px;
     height: 12px;
-    padding-left: 8px;
-    content: "";
+    padding-left: 6px;
+    content: "\f0a3";
+    opacity: 0;
+    transition: transform 200ms ease, opacity 200ms ease;
+    transform-origin: 10px 6px;
   }
 
   & > .list-item:hover:after {
-    content: "\f0a3";
+    opacity: 1;
   }
 
-  &.collapsed > .list-item:hover:after {
-    content: "\f078";
+  &.collapsed > .list-item:after {
+    transform: rotate(-90deg);
   }
 }
 

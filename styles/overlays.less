@@ -3,17 +3,23 @@
 atom-panel.modal {
   color: @text-color;
   background-color: @overlay-background-color;
-  padding: @component-padding;
-  border-radius: @component-border-radius;
+  padding: 8px;
+  border-radius: 4px;
+
+  transform: translate(0, 200px);
 
   atom-text-editor[mini] {
-    margin-bottom: @component-padding;
+    padding: @component-padding;
+    height: (32px + @component-padding);
+    max-height: 100%;
+    margin: 0;
   }
+
 
   .select-list ol.list-group,
   &.select-list ol.list-group {
-
     background-color: lighten(@overlay-background-color, 3%);
+    margin: 0;
 
     li {
       padding: @component-padding;

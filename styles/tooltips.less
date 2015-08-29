@@ -1,8 +1,9 @@
 @import "ui-variables";
 
 .tooltip {
-  @tip-background-color: @tool-panel-background-color;
-  @tip-text-color: @text-color;
+  @tip-background-color: @background-color-info;
+  @tip-shade-color: lighten(@background-color-info, 7%);
+  @tip-text-color: @text-color-selected;
   white-space: nowrap;
 
   .keystroke {
@@ -18,10 +19,12 @@
     line-height: 19px;
     border-radius: @component-border-radius;
     background-color: @tip-background-color;
+    border-top: 1px solid @tip-shade-color;
     color: @tip-text-color;
     white-space: nowrap;
     max-width: none;
   }
+
 
   &.top .tooltip-arrow {
     border-top-color: @tip-background-color;
@@ -39,12 +42,12 @@
     border-left-color: @tip-background-color;
   }
   &.bottom .tooltip-arrow {
-    border-bottom-color: @tip-background-color;
+    border-bottom-color: @tip-shade-color;
   }
   &.bottom-left .tooltip-arrow {
-    border-bottom-color: @tip-background-color;
+    border-bottom-color: @tip-shade-color;
   }
   &.bottom-right .tooltip-arrow {
-    border-bottom-color: @tip-background-color;
+    border-bottom-color: @tip-shade-color;
   }
 }

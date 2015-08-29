@@ -24,9 +24,7 @@
 @background-color-selected: #343D46;
 
 // The one true bg color
-@app-background-color: #25282e;
-
-@tree-background-color: @app-background-color;
+@app-background-color: #263138;
 
 @base-background-color: lighten(@app-background-color, 4%);
 @base-border-color: rgba(0, 0, 0, 0.5);
@@ -37,8 +35,10 @@
 @input-background-color: @app-background-color;
 @input-border-color: @base-border-color;
 
-@tool-panel-background-color: darken(@app-background-color, 2%);
+@tool-panel-background-color: darken(@app-background-color, 1%);
 @tool-panel-border-color: transparent;
+
+@tree-background-color: @tool-panel-background-color;
 
 @inset-panel-background-color: #161719;
 @inset-panel-border-color: @base-border-color;
@@ -49,8 +49,8 @@
 @overlay-background-color: @app-background-color;
 @overlay-border-color: @background-color-highlight;
 
-@button-background-color: @app-background-color;
-@button-background-color-hover: @app-background-color;
+@button-background-color: lighten(@app-background-color, 5%);
+@button-background-color-hover: lighten(@app-background-color, 10%);
 @button-background-color-selected: @app-background-color;
 @button-border-color: transparent;
 
@@ -60,7 +60,7 @@
 @tab-border-color: transparent;
 
 @tree-view-background-color: @tool-panel-background-color;
-@tree-view-border-color: @tool-panel-border-color;
+@tree-view-border-color: @tool-panel-background-color;
 
 @scrollbar-background-color: rgba(42, 42, 42, 0.5);
 @scrollbar-color: rgba(92, 92, 92, 0.5);
@@ -73,10 +73,9 @@
 
 @gutter-color: darken(@tab-background-color-active, 1%);
 
-
 // Sizes
 
-@font-size: 11px;
+@font-size: 12px;
 
 @disclosure-arrow-size: 12px;
 
@@ -92,4 +91,4 @@
 
 // Other
 
-@font-family: 'Lucida Grande', 'Segoe UI', sans-serif;
+@font-family: 'SF UI Text', 'San Francisco Display', 'Lucida Grande', 'Segoe UI', sans-serif;

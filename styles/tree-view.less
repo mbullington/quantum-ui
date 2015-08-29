@@ -2,7 +2,7 @@
 
 .tree-view {
   font-size: @font-size;
-  background-color: lighten(@app-background-color, 1%);
+  background-color: @tool-panel-background-color;
 }
 
 atom-workspace { // specificity
@@ -13,9 +13,9 @@ atom-workspace { // specificity
     // Special styling for the project directory
     & > .directory > .header {
       padding-left: 5px;
+      padding-top: @tab-top-padding + 2;
       height: @tab-height + @tab-top-padding;
-      line-height: @tab-height + @tab-top-padding - 1;
-      background: @tool-panel-background-color;
+      background-color: @tool-panel-background-color;
       span {
         color: @text-color-highlight;
       }
